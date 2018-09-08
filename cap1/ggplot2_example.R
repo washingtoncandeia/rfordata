@@ -82,11 +82,11 @@ ggplot2::ggplot() +
 
 ## 6. Graficos
 # Gráfico 1
-ggplot2::ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+ggplot2::ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) +
   geom_point() +
   geom_smooth(se = FALSE)
 
-# Gráfico 2 
+# Gráfico 2
 ggplot2::ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) +
   geom_point() +
   geom_smooth(mapping = aes(group = drv), se = FALSE)
@@ -97,41 +97,16 @@ ggplot2::ggplot(data = mpg, mapping = aes(x = displ, y = hwy, color = drv)) +
   geom_smooth(se = FALSE)
 
 # Gráfico 4
-ggplot2::ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+ggplot2::ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) +
   geom_point(mapping = aes(color = drv)) +
   geom_smooth(se = FALSE)
 
 # Gráfico 5
-ggplot2::ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) +
+ggplot2::ggplot(data = mpg, mapping = aes(x = displ, y = hwy, group = drv)) +
   geom_point(mapping = aes(color = drv)) +
   geom_smooth(mapping = aes(linetype = drv), se = FALSE)
 
 # Gráfico 6
-ggplot2::ggplot(data = mpg) + 
-  geom_point(mapping = aes(x = displ, y = hwy, color = drv))
-
-# Grafico 6 com halos.
-ggplot2::ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) +
+ggplot2::ggplot(data = mpg, mapping = aes(x = displ, y = hwy, color = drv)) +
   geom_point(size = 4, color = 'white') +
-  geom_point(mapping = aes(color = drv))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
+  geom_point()
